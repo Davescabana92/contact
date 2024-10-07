@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ajouter un Contact</h1>
+    </header>
+
+    <main>
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img id="profileImage" src="default-profile.png" alt="Photo de Profil">
+                <button id="changePhotoBtn">+</button>
+            </div>
+            <button id="saveContactBtn">Enregistrer</button>
+        </div>
+
+        <button id="labelBtn">+ Libellé</button>
+
+        <form id="contactForm">
+            <input type="text" id="firstName" placeholder="Prénom" required>
+            <input type="text" id="lastName" placeholder="Nom" required>
+            <input type="text" id="company" placeholder="Entreprise">
+            <input type="text" id="position" placeholder="Fonction">
+            <input type="email" id="email" placeholder="Email" required>
+
+            <div id="additionalEmails"></div>
+            <button type="button" id="addEmailBtn">Ajouter une adresse mail</button>
+
+            <div class="phone-section">
+                <select id="countryCode">
+                    <option value="+33">France (+33)</option>
+                    <option value="+1">États-Unis (+1)</option>
+                    <option value="+44">Royaume-Uni (+44)</option>
+                    <!-- Ajoutez d'autres options de pays ici -->
+                </select>
+                <input type="tel" id="phoneNumber" placeholder="Numéro de téléphone" required>
+            </div>
+        </form>
+
+        <div id="contactListSection">
+            <h2>Liste des Contacts</h2>
+            <table id="contactList">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Nom</th>
+                        <th>Entreprise</th>
+                        <th>Fonction</th>
+                        <th>Email(s)</th>
+                        <th>Téléphone</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
